@@ -45,7 +45,7 @@
             </ComboBox>
             <RadioButton Checked="RadioButton_Checked">Pokaz</RadioButton>
             <RadioButton IsChecked="True" Checked="RadioButton_Checked_1">Ukryj</RadioButton>
-            <CheckBox x:Name="CBX" IsChecked="True" Checked="CBX_Checked" Unchecked="CBX_Unchecked">Półprzeźroczysty</CheckBox>
+            <CheckBox x:Name="CBX" IsChecked="False" Checked="CBX_Checked" Unchecked="CBX_Unchecked">Półprzeźroczysty</CheckBox>
         </WrapPanel>
     </Grid>
 </Window>
