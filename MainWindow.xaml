@@ -6,7 +6,27 @@
         xmlns:local="clr-namespace:WpfAppForms"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Background="#D9D9D9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Foreground="#189bcc" Margin="20">Bok</TextBlock>
+        <TextBlock FontSize="20" Foreground="#189bcc" Margin="20" Grid.Row="1">Obwód</TextBlock>
+        <TextBlock FontSize="20" Foreground="#189bcc" Margin="20" Grid.Row="2">Pole</TextBlock>
+        <TextBox x:Name="bokTXT" TextChanged="bokTXT_TextChanged"  Margin="20" Grid.Column="1" Foreground="#189bcc" Background="#D9D9D9"></TextBox>
+        <Button Grid.Column="1" Grid.Row="3" Margin="20" Background="Fuchsia" Foreground="GreenYellow" Click="Button_Click">Oblicz</Button>
+        <TextBlock x:Name="kom" Grid.Column="2" Foreground="Red"></TextBlock>
+        <TextBlock x:Name="OBW" Grid.Column="1" Grid.Row="1" Foreground="Red"></TextBlock>
+        <TextBlock x:Name="POL" Grid.Column="1" Grid.Row="2" Foreground="Red"></TextBlock>
+        <Rectangle Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Height="{Binding ElementName=bokTXT, Path=Text}" Width="{Binding ElementName=bokTXT, Path=Text}"  Fill="#189bcc"></Rectangle>
+        <Rectangle x:Name="KWA" Height="0" Width="0" Grid.Row="3"   Fill="Fuchsia"></Rectangle>
     </Grid>
 </Window>

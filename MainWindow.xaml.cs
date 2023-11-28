@@ -24,5 +24,27 @@ namespace WpfAppForms
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(bokTXT.Text, out double result))
+            {               
+                OBW.Text =""+result*4;
+                POL.Text= ""+result*result;
+            }
+            else
+            {
+                kom.Text="Wpisz poprawną wartość";
+            }
+        }
+
+        private void bokTXT_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (double.TryParse(bokTXT.Text, out double result))
+            {
+                KWA.Height = result;
+                KWA.Width = result;
+            }
+        }
     }
 }
