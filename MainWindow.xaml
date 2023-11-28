@@ -29,6 +29,7 @@
         <TextBlock x:Name="OBW" Grid.Column="1" Grid.Row="1" Foreground="Red"></TextBlock>
         <TextBlock x:Name="POL" Grid.Column="1" Grid.Row="2" Foreground="Red"></TextBlock>
         <Rectangle Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Height="{Binding ElementName=bokTXT, Path=Text}" Width="{Binding ElementName=bokTXT, Path=Text}"  Fill="{Binding ElementName=ComboKolor, Path=Text}"></Rectangle>
+        <Image Source="silly.jpg" Height="{Binding ElementName=KWA, Path=Height}" Width="{Binding ElementName=KWA, Path=Width}" Grid.Row="3"></Image>
         <Rectangle x:Name="KWA" Height="0" Width="0" Grid.Row="3"   Fill="Fuchsia"></Rectangle>
         <Image x:Name="sillyCar" Source="car.jpg" Height="100" Grid.Column="2"  Grid.Row="5"></Image>
         <WrapPanel Grid.Row="5" Grid.ColumnSpan="2">

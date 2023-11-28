@@ -9,5 +9,6 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("car.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("silly.jpg")]
 
 

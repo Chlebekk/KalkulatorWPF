@@ -21,3 +21,4 @@ C:\Users\programista\Desktop\Nowy folder (4)\WpfAppForms\obj\Debug\net6.0-window
 C:\Users\programista\Desktop\Nowy folder (4)\WpfAppForms\obj\Debug\net6.0-windows\ref\WpfAppForms.dll
 C:\Users\programista\Desktop\Nowy folder (4)\WpfAppForms\bin\Debug\net6.0-windows\car.jpg
 C:\Users\programista\Desktop\Nowy folder (4)\WpfAppForms\obj\Debug\net6.0-windows\WpfAppForms_Content.g.cs
+C:\Users\programista\Desktop\Nowy folder (4)\WpfAppForms\bin\Debug\net6.0-windows\silly.jpg

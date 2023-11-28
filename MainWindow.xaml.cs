@@ -42,7 +42,7 @@ namespace WpfAppForms
 
         private void bokTXT_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (double.TryParse(bokTXT.Text, out double result) && result <= 200)
+            if (double.TryParse(bokTXT.Text, out double result))
             {
                 SolidColorBrush color = (SolidColorBrush)
                     new BrushConverter().ConvertFromString(kCMB.Text);
