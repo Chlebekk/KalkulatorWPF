@@ -17,16 +17,35 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock FontSize="20" Foreground="#189bcc" Margin="20">Bok</TextBlock>
         <TextBlock FontSize="20" Foreground="#189bcc" Margin="20" Grid.Row="1">Obwód</TextBlock>
         <TextBlock FontSize="20" Foreground="#189bcc" Margin="20" Grid.Row="2">Pole</TextBlock>
         <TextBox x:Name="bokTXT" TextChanged="bokTXT_TextChanged"  Margin="20" Grid.Column="1" Foreground="#189bcc" Background="#D9D9D9"></TextBox>
-        <Button Grid.Column="1" Grid.Row="3" Margin="20" Background="Fuchsia" Foreground="GreenYellow" Click="Button_Click">Oblicz</Button>
+        <Button Grid.Column="1" Grid.Row="4" Margin="20" Background="Fuchsia" Foreground="GreenYellow" Click="Button_Click">Oblicz</Button>
         <TextBlock x:Name="kom" Grid.Column="2" Foreground="Red"></TextBlock>
         <TextBlock x:Name="OBW" Grid.Column="1" Grid.Row="1" Foreground="Red"></TextBlock>
         <TextBlock x:Name="POL" Grid.Column="1" Grid.Row="2" Foreground="Red"></TextBlock>
-        <Rectangle Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Height="{Binding ElementName=bokTXT, Path=Text}" Width="{Binding ElementName=bokTXT, Path=Text}"  Fill="#189bcc"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Height="{Binding ElementName=bokTXT, Path=Text}" Width="{Binding ElementName=bokTXT, Path=Text}"  Fill="{Binding ElementName=ComboKolor, Path=Text}"></Rectangle>
         <Rectangle x:Name="KWA" Height="0" Width="0" Grid.Row="3"   Fill="Fuchsia"></Rectangle>
+        <Image x:Name="sillyCar" Source="car.jpg" Height="100" Grid.Column="2"  Grid.Row="5"></Image>
+        <WrapPanel Grid.Row="5" Grid.ColumnSpan="2">
+            <TextBlock Margin="20" FontSize="20" Foreground="#189bcc"> Kolor kwadratu</TextBlock>
+            <ComboBox x:Name="kCMB" Margin="20" SelectedIndex="0">
+                <ComboBoxItem Content="#189BCC"></ComboBoxItem>
+                <ComboBoxItem Content="Fuchsia"></ComboBoxItem>
+                <ComboBoxItem Content="Red"></ComboBoxItem>
+            </ComboBox>
+            <ComboBox Margin="20" x:Name="ComboKolor" SelectedIndex="0" >
+                <ComboBoxItem Content="#189BCC"></ComboBoxItem>
+                <ComboBoxItem Content="Fuchsia"></ComboBoxItem>
+                <ComboBoxItem Content="Red"></ComboBoxItem>
+            </ComboBox>
+            <RadioButton Checked="RadioButton_Checked">Pokaz</RadioButton>
+            <RadioButton IsChecked="True" Checked="RadioButton_Checked_1">Ukryj</RadioButton>
+            <CheckBox x:Name="CBX" IsChecked="True" Checked="CBX_Checked" Unchecked="CBX_Unchecked">Półprzeźroczysty</CheckBox>
+        </WrapPanel>
     </Grid>
 </Window>
